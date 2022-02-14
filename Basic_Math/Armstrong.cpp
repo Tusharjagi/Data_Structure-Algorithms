@@ -15,11 +15,11 @@ int main(){
     }
     if (sum == n)
     {
-        cout<<"Artmstrong "<<endl;
+        cout<<"It is Artmstrong Number "<<endl;
     }
     else
     {
-        cout<<"Not a Armstrong "<<endl;
+        cout<<"Sorry !!! Not a Armstrong "<<endl;
     }
     
     return 0;
