@@ -13,9 +13,9 @@ int Binary_Search(int arr[], int key, int arrSize)
         {
             return mid;
         }
-        if (key > mid)
+        else if (arr[mid] < key)
         {
-            start = mid + 1;
+           start = mid + 1;
         }
         else
         {
@@ -28,7 +28,9 @@ int Binary_Search(int arr[], int key, int arrSize)
 
 int main(){
     int arr[10] = {1,2,3,4,5,6,7,8,9,10};
-    int key = 4;
+    cout << "Enter the key :: ";
+    int key;
+    cin>>key;
     int arrSize = sizeof(arr)/sizeof(arr[0]);
     int result = Binary_Search(arr, key, arrSize);
     cout<<"Result :: "<<result;
