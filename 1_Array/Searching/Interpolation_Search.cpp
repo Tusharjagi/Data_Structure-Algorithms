@@ -25,7 +25,7 @@ int interpolation_Search(int arr[], int key, int arrSize)
         
         
     }
-    return   - 1;
+    return - 1;
 
 
 }
