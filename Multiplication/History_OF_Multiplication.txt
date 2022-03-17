@@ -1,0 +1,7 @@
+
+
+1960 Andrey Kolmogorov Traditional Algorithm TC = (N^2) 
+1962 Anatoly Karatsuba TC = {[O(n^log^3)] OR [O(N^1.59)] }
+1972 Schonhage-Streassen TC = [O(N.log N.log log N)] ~~ [O(N.log N)]
+2007 Martin Furer TC = [O(N.log N . K^log*N)] ~~ [O(N.log N)]
+2019 Harvey & van der Hoeven TC = [O(N.log N.4^log*N)] ~~ [O(N.log N)]
