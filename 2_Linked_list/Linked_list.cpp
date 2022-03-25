@@ -1,38 +1,35 @@
-#include <iostream>
+#include<iostream>
+#include<bits/stdc++.h>
+
 using namespace std;
 
-class Node
-{
-public:
-    int value;
-    Node *next;
+class Node{
+    public:
+    int data;
+    Node* next;
+
+    Node(int data)
+    {
+        this -> data = data;
+        this -> next = NULL;
+    }
 };
 
-int main()
-{
-    Node *head;
-    Node *one = NULL;
-    Node *two = NULL;
-    Node *three = NULL;
+int main(){
 
-    one = new Node();
-    two = new Node();
-    three = new Node();
+    Node* node1 = new Node(10);
+    cout<< node1 -> data << endl;
+    cout<< node1 -> next << endl;
 
-    one->value = 1;
-    two->value = 2;
-    three->value = 3;
+    // Node* node2 = new Node(20);
+    // cout<<node2 -> data <<endl;
+    // cout<<node2   -> next <<endl;
 
-    one->next = two;
-    two->next = three;
-    three->next = NULL;
+    // Node* node3 = new Node(30);
+    // cout<<node3 ->data <<endl;
+    // cout<<node3 -> next <<endl;
 
-    head = one;
-    while (head != NULL)
-    {
-        cout << head->value;
-        head = head->next;
-    }
 
+    
     return 0;
 }
