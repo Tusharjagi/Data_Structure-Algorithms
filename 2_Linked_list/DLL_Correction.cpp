@@ -43,12 +43,21 @@ int getLength(Node *head)
     return len;
 }
 
-void InsertAtHead(Node *&head, int d)
+void InsertAtHead(Node *&tail, Node *&head, int d)
 {
-    Node *temp = new Node(d);
-    temp->next = head;
-    head->prev = temp;
-    head = temp;
+    if (head == NULL)
+    {
+        Node *temp = new Node(d);
+        head = temp;
+        tail = temp;
+    }
+    else
+    {
+        Node *temp = new Node(d);
+        temp->next = head;
+        head->prev = temp;
+        head = temp;
+    }
 }
 
 void InsertAttail(Node *&tail, Node *&head, int d)
@@ -56,9 +65,8 @@ void InsertAttail(Node *&tail, Node *&head, int d)
     if (tail == NULL)
     {
         Node *temp = new Node(d);
-        tail->next = temp;
-        temp->prev = tail;
         tail = temp;
+        head = temp;
     }
     else
     {
@@ -73,7 +81,7 @@ void InsertAtmid(Node *&tail, Node *&head, int mid, int d)
 {
     if (mid == 1)
     {
-        InsertAtHead(head, d);
+        InsertAtHead(head, tail, d);
         return;
     }
 
@@ -102,20 +110,21 @@ void InsertAtmid(Node *&tail, Node *&head, int mid, int d)
 
 int main()
 {
-    Node *node1 = new Node(10);
-    Node *head = node1;
-    Node *tail = node1;
+    Node *head = NULL;
+    Node *tail = NULL;
 
     printLL(head);
-    cout << getLength(head) << endl;
+    // cout << getLength(head) << endl;
 
-    InsertAtHead(head, 11);
+    InsertAtHead(tail,head, 11);
+    printLL(head);
+    cout << "head  " << head->data << endl;
+    cout << "tail  " << tail->data << endl;
+
+    InsertAtHead(tail, head, 3);
     printLL(head);
 
-    InsertAtHead(head, 3);
-    printLL(head);
-
-    InsertAtHead(head, 45);
+    InsertAtHead(tail,head , 45);
     printLL(head);
 
     InsertAttail(tail, head, 34);
