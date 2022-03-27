@@ -1,6 +1,8 @@
 {
     "files.associations": {
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "bitset": "cpp",
+        "ostream": "cpp"
     },
     "code-runner.runInTerminal": true
 }
