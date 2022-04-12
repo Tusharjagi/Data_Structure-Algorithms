@@ -40,7 +40,6 @@ int partition(int *arr, int s, int e)
         return pivotIndex;
     }
 
-
 }
 
 void quickSort(int *arr, int s, int e)
@@ -58,6 +57,7 @@ void quickSort(int *arr, int s, int e)
     // Rigth Part
     quickSort(arr,p+1,e);
 }
+
 int main(){
     int arr[10] = {9,4,2,7,3,1,8,5,6,0};
     int n = 10;
