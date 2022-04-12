@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int partition(int arr[], int s, int e)
+int partition(int *arr, int s, int e)
 {
     int pivot = arr[s];
 
@@ -43,7 +43,7 @@ int partition(int arr[], int s, int e)
 
 }
 
-void quickSort(int arr[], int s, int e)
+void quickSort(int *arr, int s, int e)
 {
     // Base Case
     if(s >= e)
