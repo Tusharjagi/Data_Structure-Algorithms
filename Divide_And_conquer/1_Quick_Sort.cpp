@@ -37,9 +37,9 @@ int partition(int *arr, int s, int e)
         {
             swap(arr[i++],arr[j--]);
         }
-        return pivotIndex;
+        
     }
-
+    return pivotIndex;
 }
 
 void quickSort(int *arr, int s, int e)
