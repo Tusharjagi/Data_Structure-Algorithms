@@ -5,8 +5,6 @@ using namespace std;
 
 // LIFO
 
-
-
 int main(){
     stack<int> s;
 
