@@ -1,5 +1,5 @@
 Stack using LIFO -> Last In First Out;
 Operation -> 1) Push;
              2) Pop;
-             3) Peek;
+             3) Peek, Top;
              4) Empty;
